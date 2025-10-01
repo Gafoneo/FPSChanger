@@ -15,6 +15,16 @@
     <RootNamespace>FPSChanger</RootNamespace>
   </PropertyGroup>
 
+	<PropertyGroup>
+		<DebugSymbols>true</DebugSymbols>
+		<DebugType>embedded</DebugType>
+		<!--
+            Trim the project path to prevent players from potentially
+            viewing Private Information in stack traces.
+            -->
+		<PathMap>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)'))=./</PathMap>
+	</PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="BepInEx.Analyzers" Version="1.*" PrivateAssets="all" />
     <PackageReference Include="BepInEx.Core" Version="5.*" />
