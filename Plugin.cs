@@ -18,7 +18,7 @@ public class FPSCInputClass : LcInputActions
 
 [BepInPlugin(MyPluginInfo.PLUGIN_GUID, MyPluginInfo.PLUGIN_NAME, MyPluginInfo.PLUGIN_VERSION)]
 [BepInDependency("com.rune580.LethalCompanyInputUtils", BepInDependency.DependencyFlags.HardDependency)]
-public class FPSChanger : BaseUnityPlugin  // Change shitty logic
+public class FPSChanger : BaseUnityPlugin
 {
     public static FPSChanger Instance { get; private set; } = null!;
     internal static new ManualLogSource Logger;
@@ -35,7 +35,6 @@ public class FPSChanger : BaseUnityPlugin  // Change shitty logic
 
     private void Awake()
     {
-        // Plugin startup logic
         Logger = base.Logger;
         Instance = this;
         Logger.LogInfo($"Plugin {MyPluginInfo.PLUGIN_GUID} is loading!");
